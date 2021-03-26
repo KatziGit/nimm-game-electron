@@ -55,7 +55,7 @@ function App() {
 				<Navbar collapseOnSelect bg="light" expand="md" className="mb-3">
 					<LinkContainer to="/">
 						<Navbar.Brand className="font-weight-bold text-muted">
-							Turnierverwaltung
+							Nimm-Game
 						</Navbar.Brand>
 					</LinkContainer>
 					<Navbar.Toggle />
@@ -63,24 +63,15 @@ function App() {
 						<Nav activeKey={window.location.pathname}>
 							{isAuthenticated ? (
 								<>
-									<LinkContainer to="/personen">
-										<Nav.Link>Personenverwaltung</Nav.Link>
-									</LinkContainer>
-									<LinkContainer to="/mannschaften">
-										<Nav.Link>Mannschaftsverwaltung</Nav.Link>
-									</LinkContainer>
-									<LinkContainer to="/turniere">
-										<Nav.Link>Turnierverwaltung</Nav.Link>
+									<LinkContainer to="/game">
+										<Nav.Link>Spiel starten</Nav.Link>
 									</LinkContainer>
 									<Nav.Link onClick={handleLogout}>Logout</Nav.Link>
 								</>
 							) : (
 								<>
-									<LinkContainer to="/signup">
-										<Nav.Link>Signup</Nav.Link>
-									</LinkContainer>
 									<LinkContainer to="/login">
-										<Nav.Link>Login</Nav.Link>
+										<Nav.Link>Anmelden</Nav.Link>
 									</LinkContainer>
 								</>
 							)}

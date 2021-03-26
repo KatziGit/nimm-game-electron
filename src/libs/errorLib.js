@@ -19,6 +19,6 @@ export function onError(error) {
 		alert(message);
 	}
 	else {
-		console.log("[Mannschaftsverwaltung] - Undefined Error")
+		console.log("[App] - Undefined Error")
 	}
 }

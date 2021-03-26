@@ -8,10 +8,6 @@
 import Home from "./Containers/Home";
 import NotFound from "./Containers/NotFound";
 import Login from "./Containers/Login";
-import Signup from "./Containers/Signup";
-import Personenverwaltung from './Containers/Personenverwaltung';
-import Mannschaftsverwaltung from './Containers/Mannschaftsverwaltung';
-import Turnierverwaltung from './Containers/Turnierverwaltung';
 import AuthenticatedRoute from "./Components/AuthenticatedRoute";
 import UnauthenticatedRoute from "./Components/UnauthenticatedRoute";
 
@@ -29,17 +25,8 @@ export default function Routes() {
 			<UnauthenticatedRoute exact path="/login">
 				<Login />
 			</UnauthenticatedRoute>
-			<UnauthenticatedRoute exact path="/signup">
-				<Signup />
-			</UnauthenticatedRoute>
-			<AuthenticatedRoute exact path="/personen">
-				<Personenverwaltung />
-			</AuthenticatedRoute>
-			<AuthenticatedRoute exact path="/mannschaften">
-				<Mannschaftsverwaltung />
-			</AuthenticatedRoute>
-			<AuthenticatedRoute exact path="/turniere">
-				<Turnierverwaltung />
+			<AuthenticatedRoute exact path="/game">
+				{/* TODO: Add Game-Container */}
 			</AuthenticatedRoute>
 			{/* Catch unmatched routes */}
 			<Route>

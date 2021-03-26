@@ -6,7 +6,7 @@ function createWindow () {
 
 	// Production
 	win.loadURL(`file://${path.join(__dirname, '../build/index.html')}`);
-	//
+	// Development
 	//win.loadURL('http://localhost:3000/');
 }
 app.on('ready', createWindow);

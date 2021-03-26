@@ -22,11 +22,10 @@ export default function Login() {
 	const [isLoading, setIsLoading] = useState(false);
 	const [fields, handleFieldChange] = useFormFields({
 		name: "",
-		password: "",
 	});
 
 	function validateForm() {
-		return fields.name.length > 0 && fields.password.length > 0;
+		return fields.name.length > 0;
 	}
 
 	async function handleSubmit(event) {
@@ -35,7 +34,7 @@ export default function Login() {
 		setIsLoading(true);
 
 		try {
-			await Auth.signIn(fields.name, fields.password);
+			await Auth.signIn(fields.name);
 			userHasAuthenticated(true);
 		} catch (e) {
 			onError(e);
@@ -50,12 +49,8 @@ export default function Login() {
 					<Form.Label>Name</Form.Label>
 					<Form.Control autoFocus type="name" value={fields.name} onChange={handleFieldChange} autoComplete="username"/>
 				</Form.Group>
-				<Form.Group size="lg" controlId="password">
-					<Form.Label>Password</Form.Label>
-					<Form.Control type="password" value={fields.password} onChange={handleFieldChange} autoComplete="current-password"/>
-				</Form.Group>
 				<LoaderButton block size="lg" type="submit" isLoading={isLoading} disabled={!validateForm()}>
-					Login
+					Anmelden
 				</LoaderButton>
 			</Form>
 		</div>
