@@ -8,6 +8,7 @@
 import Home from "./Containers/Home";
 import NotFound from "./Containers/NotFound";
 import Login from "./Containers/Login";
+import Game from "./Containers/Game"
 import AuthenticatedRoute from "./Components/AuthenticatedRoute";
 import UnauthenticatedRoute from "./Components/UnauthenticatedRoute";
 
@@ -26,7 +27,7 @@ export default function Routes() {
 				<Login />
 			</UnauthenticatedRoute>
 			<AuthenticatedRoute exact path="/game">
-				{/* TODO: Add Game-Container */}
+				<Game />
 			</AuthenticatedRoute>
 			{/* Catch unmatched routes */}
 			<Route>
